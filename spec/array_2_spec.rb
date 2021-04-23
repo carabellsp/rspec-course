@@ -10,6 +10,6 @@ RSpec.describe Array do
   end
 
   it 'checks sally has worked as an alias' do
-    expect(subject).to eq(sally)
+    expect(subject).to eq([1,2])
   end
 end
