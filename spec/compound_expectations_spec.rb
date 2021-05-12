@@ -20,3 +20,5 @@ RSpec.describe [:usa, :canada, :mexico] do
     expect(subject.sample).to eq(:usa).or eq(:canada).or eq(:mexico)
   end
 end
+
+

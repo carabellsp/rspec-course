@@ -6,7 +6,7 @@ class Actor
 
   def ready?
     sleep(3)
-    true
+    true # this will bypass the sleeping and return true for the method
   end
 
   def act
@@ -44,8 +44,8 @@ end
 # movie.start_shooting
 
 RSpec.describe Movie do
-  let(:stuntman) { double("Mr. Danger", ready?: true, act: 'Any string at all', fall_off_ladder: 'Sure! Lets do it', light_on_fire: true)}
-  subject { described_class.new(stuntman) }
+  let(:stuntman) { double("Mr. Danger", ready?: true, act: 'Any string at all', fall_off_ladder: 'Sure! Lets do it', light_on_fire: true)} # you could provide any methods here, we are just mimicking our class
+  subject { described_class.new(stuntman) } # normally this expects the 'actor' object but we have provided the stuntman as a stand-in i.e. mock
 
   describe '#start_shooting method' do
     it 'expects an actor to do 3 actions' do

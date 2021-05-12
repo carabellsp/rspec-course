@@ -11,7 +11,7 @@ RSpec.describe 'start_with and end_with matchers' do
 
   describe [:a, :b, :c, :d] do
     it 'should check for elements at beginning or end of the array' do
-      expect(subject).to start_with(:a)
+      expect(subject).not_to start_with(:d)
       expect(subject).to start_with(:a, :b)
       expect(subject).to start_with(:a, :b, :c)
       expect(subject).to end_with(:d)
